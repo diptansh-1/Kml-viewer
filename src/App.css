@@ -1,0 +1,304 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --accent-color: #60a5fa;
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --border-radius: 12px;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.app-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upload-section {
+  margin-bottom: 2rem;
+}
+
+.file-uploader {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.file-uploader h2 {
+  margin: 0 0 1.5rem;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.upload-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.file-name {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.data-section {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.view-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.view-controls button {
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.view-controls button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.view-controls button:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.summary-table, .detailed-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.summary-table th, .detailed-table th,
+.summary-table td, .detailed-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-table th, .detailed-table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.total-row {
+  background-color: #f8fafc;
+}
+
+.map-section {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.map-section h2 {
+  margin: 0 0 1.5rem;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.map-container {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.05);
+}
+
+.leaflet-container {
+  border-radius: var(--border-radius);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.leaflet-popup-content h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text-color);
+}
+
+.leaflet-popup-content p {
+  margin: 0.25rem 0;
+  color: var(--text-color);
+}
+
+.app-footer {
+  background-color: white;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  box-shadow: 0 -1px 0 rgb(0 0 0 / 0.1);
+}
+
+@media (max-width: 768px) {
+  .app-content {
+    padding: 1rem;
+  }
+  
+  .upload-container {
+    flex-direction: column;
+  }
+  
+  .file-name {
+    margin-top: 0.5rem;
+  }
+  
+  .view-controls {
+    flex-direction: column;
+  }
+  
+  .view-controls button {
+    width: 100%;
+  }
+}
+
+.drop-zone {
+  border: 2px dashed #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  transition: all 0.2s;
+  background-color: #f8fafc;
+}
+
+.drop-zone.dragging {
+  border-color: var(--primary-color);
+  background-color: #eff6ff;
+}
+
+.drop-zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drop-zone-content svg {
+  color: var(--primary-color);
+  width: 48px;
+  height: 48px;
+}
+
+.drop-zone-content p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.drop-zone-content span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f1f5f9;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  margin-top: 0.5rem;
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.remove-file:hover {
+  background-color: #e2e8f0;
+  color: #64748b;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample KML</name>
+    <description>A sample KML file with different geometry types</description>
+    
+    <Placemark>
+      <name>Eiffel Tower</name>
+      <description>Famous landmark in Paris</description>
+      <Point>
+        <coordinates>2.2945,48.8584,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Central Park Path</name>
+      <description>A walking path in Central Park</description>
+      <LineString>
+        <coordinates>
+          -73.968285,40.785091,0
+          -73.967181,40.782761,0
+          -73.965492,40.780892,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <Placemark>
+      <name>Times Square Area</name>
+      <description>Boundary of Times Square area</description>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -73.986794,40.759892,0
+              -73.985914,40.759241,0
+              -73.984766,40.760334,0
+              -73.985667,40.760968,0
+              -73.986794,40.759892,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml> 
