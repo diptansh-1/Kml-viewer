@@ -34,7 +34,7 @@ const calculateLength = (coordinates: number[][]): number => {
 
 const parseCoordinates = (coordString: string): number[][] => {
   return coordString.trim().split(/\s+/).map(coord => {
-    const [lon, lat, alt] = coord.split(',').map(Number);
+    const [lon, lat] = coord.split(',').map(Number);
     return [lon, lat];
   });
 };
